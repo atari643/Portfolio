@@ -1,0 +1,70 @@
+@media only screen and (max-width: 808px) {
+    #telmenu {
+        height: 100%;
+        width: 19em;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        font-size: 0.63em;
+        background-color: rgba(28, 28, 28, 1);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    #telmenu>li.click {
+        display: flex;
+        justify-content: center;
+    }
+    span {
+        z-index: 1;
+    }
+    #telmenu .fonction,
+    #telmenu .Pestel {
+        margin-top: 20px;
+    }
+    #telmenu a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 1.4em;
+        color: white;
+        display: inline;
+        text-align: center;
+    }
+    ul.right {
+        padding-left: 0;
+    }
+    ul {
+        list-style-type: none;
+    }
+    #telmenu .sous>li {
+        margin-top: 20px;
+    }
+    .flèche {
+        width: 9%;
+    }
+    .fonction a,
+    .Pestel a,
+    .click a {
+        display: inline
+    }
+    #telmenu a:hover {
+        opacity: 0.3;
+    }
+    nav {
+        font-family: 'Raleway', sans-serif;
+    }
+    #titre2 {
+        position: absolute;
+        top: 0;
+        color: white;
+        margin-left: 80px;
+        margin-top: 10px;
+        font-size: 15pt;
+    }
+    #ordimenu {
+        display: none;
+    }
+    #ordimenu.right {
+        display: none;
+    }
+}

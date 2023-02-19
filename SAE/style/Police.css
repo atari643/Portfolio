@@ -1,0 +1,13 @@
+*:not(nav) {
+    font-family: Arial, sans-serif;
+    
+}
+
+a,
+#titre2 {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+p{
+    text-align: left;
+}

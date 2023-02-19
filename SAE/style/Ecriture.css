@@ -1,0 +1,11 @@
+h2:not(#titre2){
+    font-family: Arial, sans-serif;
+    padding-left: 10%;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+}

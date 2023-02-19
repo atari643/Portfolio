@@ -1,0 +1,104 @@
+@media only screen and (min-width: 808px) {
+    #ordimenu {
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+    }
+    #telmenu {
+        display: none;
+    }
+    .en-tête {
+        width: 100vw;
+        height: 3.5em;
+        position: fixed;
+        top: 0;
+        background-color: rgba(28, 28, 28, 1);
+        z-index: 1;
+    }
+    .flèche {
+        width: 9%;
+    }
+    #ordimenu li.fonction,
+    #ordimenu li.Pestel,
+    #ordimenu li.click {
+        list-style-type: none;
+        font-size: 1em;
+        height: 20px;
+        text-align: center;
+        float: left;
+        margin: 0 auto;
+    }
+    #ordimenu li.fonction,
+    #ordimenu li.Pestel,
+    #ordimenu li.click
+      {
+        width: 155px;
+        height: 33px;
+    }
+    #ordimenu li a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    #ordimenu li.fonction:hover ul.sous,
+    #ordimenu li.Pestel:hover ul.sous,
+    #ordimenu li.click:hover ul.sous {
+        display: inline-block;
+        background-color: #1c1c1c;
+        color: white;
+        padding: 2em;
+        margin-top: 1em;
+    }
+    #ordimenu li.fonction:hover ul.sous {
+        left: 7em;
+        position: absolute;
+        top: 2em;
+    }
+    #ordimenu li.Pestel:hover ul.sous {
+        left: 14em;
+        position: absolute;
+        top: 2em;
+    }
+    #ordimenu li.click:hover ul.sous {
+        right: 20em;
+        position: absolute;
+        top: 2em;
+    }
+    #ordimenu li.fonction:hover ul,
+    #ordimenu li.Pestel:hover ul,
+    #ordimenu li.click:hover ul {
+        display: inline-block;
+        background-color: #1c1c1c;
+        color: white;
+        padding: 2em;
+        margin-top: 2em;
+    }
+    #ordimenu li.fonction:hover ul.sous li,
+    #ordimenu li.Pestel:hover ul.sous li,
+    #ordimenu li.click:hover ul.sous li {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 1em;
+    }
+    .sous {
+        display: none;
+    }
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    html {
+        min-width: 10%;
+    }
+    #titre2 {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        color: white;
+        margin-left: 26px;
+        margin-top: 10px;
+        font-size: 15pt;
+    }
+}
