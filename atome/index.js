@@ -10,7 +10,8 @@ var x = 300;
 var y = 300;
 var mul = 1;
 var dia = 10;
-proton.addEventListener('click', () => {
+
+proton.addEventListener('click', ()=> {
     var compteur = protons.length;
     if (compteur < 5) {
         if (compteur % 4 == 1) {
@@ -39,7 +40,7 @@ proton.addEventListener('click', () => {
             haut();
         }
     }
-})
+});
 neutron.addEventListener('click', () => {
     var compteur = neutrons.length;
     if (compteur < 5) {
@@ -70,7 +71,7 @@ neutron.addEventListener('click', () => {
         }
         
     }
-
+})
 electron.addEventListener('click', ()=>{
     if(random(0, 1)<0.5){
         electrons.push(new Balle(random(0, 200), random(0, 200), 'blue'))
@@ -79,7 +80,7 @@ electron.addEventListener('click', ()=>{
     }
 })
 
-})
+
 function setup() {
     var canvas = createCanvas(600, 600);
     canvas.class("center");
@@ -135,5 +136,9 @@ function check(){
         if(protons.length==1 && neutrons.length==2){
             images.src="./atome/Tritium.png"
         }
+    }else if (protons.length>electrons.length){
+        proton.addEventListener('click', ()=>{
+            
+        });
     }
 }

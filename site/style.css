@@ -1,46 +1,11 @@
-.scroll{
-    position: fixed;
-    visibility: hidden;
-    transition: 1s;
-    margin-top: 50px;
-    z-index: 20;
-    width: 400px;
-    height: 90px;
-    background-color: rgb(255, 255, 255);
-}
-.scroll button{
-    background-color: rgba(238, 55, 55, 0.808);
-    height: 50px;
-    position: absolute;
-    top: -200px;
-    transition: 2s;
-    transform: translateY(240px);
-    border-radius: 100px;
-}
-.scroll a{
-    color: white;
-    text-decoration: none;
-}
-.scroll h1{
-    color: #000101;
-}
-.right{
-    right: 0;
-    transform: translateX(0);
-    visibility: visible;
-} 
-.left{
-    left: -50px;
-    transform: translateX(100%);
-}
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-#contact{
-    border: 2px solid grey;
-}
+
 *::selection{
     background:#000101;
     color: #fefeff;
@@ -48,20 +13,7 @@
 html{
     scroll-behavior: smooth;
 }
-body{
-    background-color: black;
-    height: 300vh;
-}
-header{
-    color: white;
-}
-.title{
-    font-size: 3pc;
-    display: flex;
-    position: relative;
-    
-    margin-top: 100px;
-}
+
 .container{
     width: 50%;
     align-items: center;
@@ -69,37 +21,11 @@ header{
     left: 200px;
     position: absolute;
 }
-.skills{
-    background-color: white;
-    height: 50vh;
-    width: var(--x);
-    z-index: 1;
-    position: absolute;
-    top: 100vh;
-}
-.Experience{
-    background-color: #fefeff;
-    height: 100vh;
-    width: var(--x);
-    position: absolute;
-    top: 160vh;
-}
-.code{
-    border: 2px solid red;
-    width: auto;
 
+img{
+    border: red solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
 }
-.Management{
-    width: auto;
-    height: auto;    
-    border: 2px solid blue;
-}
-.theme{
-    width: auto;
-    border: 2px solid green;
-}
-.flex{
-    display: flex;
-    height: 70%;
-    flex-direction: column;
-}
+
