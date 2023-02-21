@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+
 *::selection{
     background:#000101;
     color: #fefeff;
@@ -15,17 +16,42 @@ html{
 }
 
 .container{
-    width: 50%;
+    width: 80%;
     align-items: center;
-    top: 100px;
-    left: 200px;
+    top: 150px;
+    left: 500px;
     position: absolute;
+    display: flex;
+    justify-content: space-around;
 }
 
 img{
     border: red solid;
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 300px;
 }
-
+.description{
+    width: 30%;
+}
+#profile{
+    width: 40%;
+}
+#name{
+    margin-bottom: 100px;
+    font-size: xx-large;
+}
+hr{
+    position: absolute;
+    width: 100vw;
+    top: 55%;
+}
+button{
+    position: absolute;
+    top: 510px;
+    z-index: -1;
+    background-color: white;
+    border: none;
+    height: 100px;
+    border-top: grey 5px solid;
+}
