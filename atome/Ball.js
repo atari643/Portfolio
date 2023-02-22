@@ -7,7 +7,7 @@ function Balle(x, y, col) {
 
     this.display = function () {
         fill(this.col);
-        ellipse(this.x, this.y, 10, 10);
+        ellipse(this.x, this.y, 5, 5);
     }
     this.move = function () {
         if (this.x >= 600 || this.y >= 600) {

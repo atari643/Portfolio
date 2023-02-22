@@ -10,37 +10,41 @@ var x = 300;
 var y = 300;
 var mul = 1;
 var dia = 10;
-
+var angle = 0;
 proton.addEventListener('click', ()=> {
-    var compteur = protons.length;
-    if (compteur < 5) {
-        if (compteur % 4 == 1) {
+    var compteur = protons.length+neutrons.length;
+    if(protons.length<=electrons.length){
+        if (compteur % 9 == 1) {
             droit();
         }
-        if (compteur % 4 == 2) {
+        if (compteur % 9 == 2) {
             haut();
         }
-        if (compteur % 4 == 3) {
+        if (compteur % 9 == 3) {
             gauche();
         }
-        if (compteur % 4 == 0) {
+        if (compteur % 9 == 4) {
+            gauche();
+        }
+        if (compteur % 9 == 5) {
             bas();
+        }
+        if (compteur % 9 == 6) {
+            bas();
+        }
+        if (compteur % 9 == 7) {
+            droit();
+        }
+        if (compteur % 9 == 8) {
+            droit();
+        }
+        if(compteur % 9 == 0){
+            haut();
         }
         protons.push(new Balle(x, y, 'red'));
-        if (compteur % 4 == 1) {
-            gauche();
-        }
-        if (compteur % 4 == 2) {
-            bas();
-        }
-        if (compteur % 4 == 3) {
-            droit();
-        }
-        if (compteur % 4 == 0) {
-            haut();
-        }
     }
-});
+}
+);
 neutron.addEventListener('click', () => {
     var compteur = neutrons.length;
     if (compteur < 5) {
@@ -69,15 +73,17 @@ neutron.addEventListener('click', () => {
         if (compteur % 4 == 0) {
             haut();
         }
-        
     }
 })
+
 electron.addEventListener('click', ()=>{
+    if(protons.length>=electrons.length){
     if(random(0, 1)<0.5){
         electrons.push(new Balle(random(0, 200), random(0, 200), 'blue'))
     }else{
         electrons.push(new Balle(random(200, 600), random(200, 600), 'blue'))
     }
+}
 })
 
 
@@ -136,9 +142,5 @@ function check(){
         if(protons.length==1 && neutrons.length==2){
             images.src="./atome/Tritium.png"
         }
-    }else if (protons.length>electrons.length){
-        proton.addEventListener('click', ()=>{
-            
-        });
     }
 }
