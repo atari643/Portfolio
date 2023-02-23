@@ -14,65 +14,45 @@ var angle = 0;
 proton.addEventListener('click', ()=> {
     var compteur = protons.length+neutrons.length;
     if(protons.length<=electrons.length){
-        if (compteur % 9 == 1) {
-            droit();
-        }
-        if (compteur % 9 == 2) {
-            haut();
-        }
-        if (compteur % 9 == 3) {
-            gauche();
-        }
-        if (compteur % 9 == 4) {
-            gauche();
-        }
-        if (compteur % 9 == 5) {
-            bas();
-        }
-        if (compteur % 9 == 6) {
-            bas();
-        }
-        if (compteur % 9 == 7) {
-            droit();
-        }
-        if (compteur % 9 == 8) {
-            droit();
-        }
-        if(compteur % 9 == 0){
-            haut();
-        }
+        make(compteur);
         protons.push(new Balle(x, y, 'red'));
     }
 }
 );
+function make(compteur){
+    if (compteur % 9 == 1) {
+        droit();
+    }
+    if (compteur % 9 == 2) {
+        haut();
+    }
+    if (compteur % 9 == 3) {
+        gauche();
+    }
+    if (compteur % 9 == 4) {
+        gauche();
+    }
+    if (compteur % 9 == 5) {
+        bas();
+    }
+    if (compteur % 9 == 6) {
+        bas();
+    }
+    if (compteur % 9 == 7) {
+        droit();
+    }
+    if (compteur % 9 == 8) {
+        droit();
+    }
+    if(compteur % 9 == 0){
+        haut();
+    }
+}
 neutron.addEventListener('click', () => {
-    var compteur = neutrons.length;
-    if (compteur < 5) {
-        if (compteur % 4 == 1) {
-            droit();
-        }
-        if (compteur % 4 == 2) {
-            haut();
-        }
-        if (compteur % 4 == 3) {
-            gauche();
-        }
-        if (compteur % 4 == 0) {
-            bas();
-        }
-        neutrons.push(new Balle(x, y, 'grey'));
-        if (compteur % 4 == 1) {
-            gauche();
-        }
-        if (compteur % 4 == 2) {
-            bas();
-        }
-        if (compteur % 4 == 3) {
-            droit();
-        }
-        if (compteur % 4 == 0) {
-            haut();
-        }
+    var compteur = neutrons.length+protons.length;
+    if (neutrons.length < 3) {
+        make(compteur);
+        neutrons.push(new Balle(x, y, 'grey'));  
     }
 })
 
